@@ -1,0 +1,19 @@
+# Dependency folders
+node_modules/
+
+# Environment secrets (database URIs, API keys, etc.)
+.env
+.env.local
+
+# Logs and debug files
+logs/
+*.log
+npm-debug.log*
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Editor configurations (optional but recommended)
+.vscode/
+.idea/
