@@ -1,3 +1,58 @@
-body{
-    background-color: #f8dfdf;
+body {
+    background-color: #eac7c7;
+}
+
+.nestnet-navbar {
+    background-color: #edbcbc;
+    color: #3d3030;
+    border-bottom: 1px solid rgba(61, 48, 48, 0.12);
+}
+
+.nestnet-navbar .navbar-brand {
+    color: #3d3030;
+    font-weight: 700;
+}
+
+.nestnet-navbar .navbar-brand:hover,
+.nestnet-navbar .navbar-brand:focus {
+    color: #ed7c80;
+}
+
+.nestnet-navbar .fa-globe {
+    color: #ed7c80;
+}
+
+.nestnet-navbar .fa-house {
+    color: #fff;
+    filter: drop-shadow(0 0 1px rgba(61, 48, 48, 0.45));
+}
+
+.nestnet-navbar .nav-link {
+    color: #3d3030 !important;
+}
+
+.nestnet-navbar .nav-link:hover,
+.nestnet-navbar .nav-link:focus {
+    color: #ed7c80 !important;
+}
+
+.nestnet-navbar .btn-coral {
+    color: #fff;
+    background-color: #ed7c80;
+    border-color: #ed7c80;
+}
+
+.nestnet-navbar .btn-coral:hover,
+.nestnet-navbar .btn-coral:focus {
+    color: #fff;
+    background-color: #ed7c80;
+    border-color: #ed7c80;
+}
+
+.nestnet-navbar .navbar-toggler {
+    border-color: rgba(61, 48, 48, 0.25);
+}
+
+.nestnet-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 90, 95, 0.2);
 }
