@@ -1,11 +1,81 @@
 <% layout("./layouts/boilerplate") %>
-<h3>Create New Listing</h3>
+<h3>Create a New Listing</h3>
 <form action="/listings" method="post">
-    <div><label for="title">Title:</label><input type="text" id="title" name="listing[title]" required></div><br>
-    <div><label for="image">Image URL:</label><input type="text" id="image" name="listing[image]" required></div><br>
-    <div><label for="description">Description:</label><textarea id="description" name="listing[description]" required></textarea></div><br>
-    <div><label for="price">Price:</label><input type="number" id="price" name="listing[price]" step="0.01" required></div><br>
-    <div><label for="location">Location:</label><input type="text" id="location" name="listing[location]" required></div><br>
-    <div><label for="country">Country:</label><input type="text" id="country" name="listing[country]" required></div><br>
-    <button type="submit">Create Listing</button>
-    </form>
+  <div>
+    <label for="sizesInputLarge" class="form-label">Title: </label
+    ><input
+      class="form-control form-control-lg"
+      type="text"
+      id="title"
+      name="listing[title]"
+      placeholder="Enter Title"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <label for="sizesInputLarge" class="form-label">Image URL: </label
+    ><input
+      class="form-control form-control-lg"
+      type="text"
+      id="image"
+      name="listing[image]"
+      placeholder="Enter Image URL"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <label for="sizesTextareaLarge" class="form-label">Description: </label
+    ><textarea
+      class="form-control form-control-lg"
+      id="description"
+      name="listing[description]"
+      placeholder="Enter Description"
+      required
+    ></textarea>
+  </div>
+  <br />
+  <div>
+    <label for="sizesInputLarge" class="form-label">Price: </label
+    ><input
+      class="form-control form-control-lg"
+      type="number"
+      id="price"
+      name="listing[price]"
+      step="0.01"
+      placeholder="Enter Price"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <label for="sizesInputLarge" class="form-label">Location: </label
+    ><input
+      class="form-control form-control-lg"
+      type="text"
+      id="location"
+      name="listing[location]"
+      placeholder="Enter Location"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <label for="sizesInputLarge" class="form-label">Country: </label
+    ><input
+      class="form-control form-control-lg"
+      type="text"
+      id="country"
+      name="listing[country]"
+      placeholder="Enter Country"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <button type="submit" class="btn-solid theme-primary mb-3">
+      Create Listing
+    </button>
+  </div>
+</form>
