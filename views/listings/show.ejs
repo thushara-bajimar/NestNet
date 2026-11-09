@@ -1,30 +1,38 @@
-<% layout("./layouts/boilerplate") %> <br /><br />
-<div class="card offset-1" style="width: 70%;">
-  <img
-    src="<%= listing.image %>"
-    alt="<%= listing.title %>"
-    height="500"
-    class="card-img"
-  />
-  <div class="card-body">
-    <h1 class="card-title"><%= listing.title %></h1>
-    <br />
-    <p class="card-text"><%= listing.description %></p>
-  </div>
+<% layout("./layouts/boilerplate") %>
 
-  <br /><br />
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">
-      <p>Price: &#8377;<%= listing.price.toLocaleString("en-IN") %></p>
-    </li>
-    <li class="list-group-item"><p>Location: <%= listing.location %></p></li>
-    <li class="list-group-item"><p>Country: <%= listing.country %></p></li>
-  </ul>
-  <div class="btns card-body flex-row gap-4">
-    <button type="submit" class="sub-btn btn btn-coral ms-md-3"><a href="/listings/<%= listing._id %>/edit">Edit Listing</a></button
-    ><br><br>
-    <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
-      <button type="submit" class="sub-btn btn btn-coral ms-md-3">Delete</button>
-    </form>
-  </div>
-</div>
+<section class="listing-show" aria-labelledby="listing-title">
+  <article class="card listing-show__card">
+    <img
+      src="<%= listing.image %>"
+      alt="<%= listing.title %>"
+      class="listing-show__image"
+    />
+
+    <div class="card-body listing-show__content">
+      <h1 id="listing-title" class="listing-show__title"><%= listing.title %></h1>
+      <p class="listing-show__description"><%= listing.description %></p>
+
+      <dl class="listing-show__details">
+        <div class="listing-show__detail">
+          <dt>Price</dt>
+          <dd>&#8377;<%= listing.price.toLocaleString("en-IN") %></dd>
+        </div>
+        <div class="listing-show__detail">
+          <dt>Location</dt>
+          <dd><%= listing.location %></dd>
+        </div>
+        <div class="listing-show__detail">
+          <dt>Country</dt>
+          <dd><%= listing.country %></dd>
+        </div>
+      </dl>
+
+      <div class="listing-show__actions">
+        <a class="btn sub-btn" href="/listings/<%= listing._id %>/edit">Edit listing</a>
+        <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
+          <button type="submit" class="btn listing-show__delete">Delete listing</button>
+        </form>
+      </div>
+    </div>
+  </article>
+</section>
