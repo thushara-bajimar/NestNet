@@ -1,11 +1,30 @@
-<% layout("./layouts/boilerplate") %>
-<h1><%= listing.title %></h1>
-<p><%= listing.description %></p>
-<img src="<%= listing.image %>" alt="<%= listing.title %>" height="500">
-<p>Price: &#8377;<%= listing.price.toLocaleString("en-IN") %></p>
-<p>Location: <%= listing.location %></p>
-<p>Country: <%= listing.country %></p>
-<a href="/listings/<%= listing._id %>/edit">Edit Listing</a><br><br>
-<form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
-    <button type="submit">Delete Listing</button>
-</form>
+<% layout("./layouts/boilerplate") %> <br /><br />
+<div class="card offset-1" style="width: 70%;">
+  <img
+    src="<%= listing.image %>"
+    alt="<%= listing.title %>"
+    height="500"
+    class="card-img"
+  />
+  <div class="card-body">
+    <h1 class="card-title"><%= listing.title %></h1>
+    <br />
+    <p class="card-text"><%= listing.description %></p>
+  </div>
+
+  <br /><br />
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>Price: &#8377;<%= listing.price.toLocaleString("en-IN") %></p>
+    </li>
+    <li class="list-group-item"><p>Location: <%= listing.location %></p></li>
+    <li class="list-group-item"><p>Country: <%= listing.country %></p></li>
+  </ul>
+  <div class="btns card-body flex-row gap-4">
+    <button type="submit" class="sub-btn btn btn-coral ms-md-3"><a href="/listings/<%= listing._id %>/edit">Edit Listing</a></button
+    ><br><br>
+    <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
+      <button type="submit" class="sub-btn btn btn-coral ms-md-3">Delete</button>
+    </form>
+  </div>
+</div>

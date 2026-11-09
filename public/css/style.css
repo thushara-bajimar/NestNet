@@ -161,3 +161,7 @@ body {
     border-color: #e55c5f;
     color: #fff;
 }
+
+.btns{
+    display: flex;
+}
