@@ -1,5 +1,7 @@
 <% layout("./layouts/boilerplate") %>
+<br><br>
 <h3>Create a New Listing</h3>
+<br><br>
 <form action="/listings" method="post">
   <div>
     <label for="sizesInputLarge" class="form-label">Title: </label
@@ -36,17 +38,31 @@
     ></textarea>
   </div>
   <br />
-  <div>
-    <label for="sizesInputLarge" class="form-label">Price: </label
-    ><input
-      class="form-control form-control-lg"
-      type="number"
-      id="price"
-      name="listing[price]"
-      step="0.01"
-      placeholder="Enter Price"
-      required
-    />
+  <div class="row">
+    <div class="col-4">
+      <label for="sizesInputLarge" class="form-label">Price: </label
+      ><input
+        class="form-control form-control-lg"
+        type="number"
+        id="price"
+        name="listing[price]"
+        step="0.01"
+        placeholder="&#8377;5000"
+        required
+      />
+    </div>
+    <!-- <br /> -->
+    <div class="col-8">
+      <label for="sizesInputLarge" class="form-label">Country: </label
+      ><input
+        class="form-control form-control-lg"
+        type="text"
+        id="country"
+        name="listing[country]"
+        placeholder="India"
+        required
+      />
+    </div>
   </div>
   <br />
   <div>
@@ -56,26 +72,16 @@
       type="text"
       id="location"
       name="listing[location]"
-      placeholder="Enter Location"
+      placeholder="Bengaluru, Karnataka"
       required
     />
   </div>
-  <br />
+  <br><br>
+
   <div>
-    <label for="sizesInputLarge" class="form-label">Country: </label
-    ><input
-      class="form-control form-control-lg"
-      type="text"
-      id="country"
-      name="listing[country]"
-      placeholder="Enter Country"
-      required
-    />
-  </div>
-  <br />
-  <div>
-    <button type="submit" class="btn-solid theme-primary mb-3">
+    <button type="submit" class="sub-btn btn btn-coral ms-md-3">
       Create Listing
     </button>
   </div>
 </form>
+<br><br>
