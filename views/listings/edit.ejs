@@ -1,11 +1,85 @@
-<% layout("./layouts/boilerplate") %>
+<% layout("./layouts/boilerplate") %> <br /><br />
 <h3>Edit Listing</h3>
+<br /><br />
 <form action="/listings/<%= listing._id %>?_method=PUT" method="post">
-    <div><label for="title">Title:</label><input type="text" id="title" name="listing[title]" value="<%= listing.title %>" required></div><br>
-    <div><label for="image">Image URL:</label><input type="text" id="image" name="listing[image]" value="<%= listing.image %>" required></div><br>
-    <div><label for="description">Description:</label><textarea id="description" name="listing[description]" required><%= listing.description %></textarea></div><br>
-    <div><label for="price">Price:</label><input type="number" id="price" name="listing[price]" step="0.01" value="<%= listing.price %>" required></div><br>
-    <div><label for="location">Location:</label><input type="text" id="location" name="listing[location]" value="<%= listing.location %>" required></div><br>
-    <div><label for="country">Country:</label><input type="text" id="country" name="listing[country]" value="<%= listing.country %>" required></div><br>
-    <button type="submit">Edit Listing</button>
-    </form>
+  <div>
+    <label for="sizesInputLarge" class="form-label">Title: </label
+    ><input
+      class="form-control form-control-lg"
+      type="text"
+      id="title"
+      name="listing[title]"
+      value="<%= listing.title %>"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <label for="image">Image URL:</label
+    ><input
+      class="form-control form-control-lg"
+      type="text"
+      id="image"
+      name="listing[image]"
+      value="<%= listing.image %>"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <label for="sizesTextareaLarge" class="form-label">Description:</label
+    ><textarea
+      class="form-control form-control-lg"
+      id="description"
+      name="listing[description]"
+      required
+    >
+<%= listing.description %></textarea
+    >
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-4">
+      <label for="price">Price:</label
+      ><input
+        class="form-control form-control-lg"
+        type="number"
+        id="price"
+        name="listing[price]"
+        step="0.01"
+        value="<%= listing.price %>"
+        required
+      />
+    </div>
+    <br />
+    <div class="col-8">
+      <label for="country">Country:</label
+      ><input
+        class="form-control form-control-lg"
+        type="text"
+        id="country"
+        name="listing[country]"
+        value="<%= listing.country %>"
+        required
+      />
+    </div>
+  </div>
+  <br />
+  <div>
+    <label for="location">Location:</label
+    ><input
+      class="form-control form-control-lg"
+      type="text"
+      id="location"
+      name="listing[location]"
+      value="<%= listing.location %>"
+      required
+    />
+  </div>
+  <br /><br />
+
+  <button type="submit" class="sub-btn btn btn-coral ms-md-3">
+    Edit Listing
+  </button>
+</form>
+<br /><br />

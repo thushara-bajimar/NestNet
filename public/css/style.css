@@ -1,6 +1,7 @@
 body {
     background-color: #eac7c7;
     min-height: 100vh;
+    flex: 1;
 }
 
 .container{
